@@ -134,22 +134,34 @@ Recorded in full, with reasoning, in [`tests/contradictions_log.md`](tests/contr
 
 ## How it decides
 
-```
-question
-   │
-   ├─ retrieve ─────────  hybrid: MiniLM embeddings + TF-IDF, cosine similarity
-   │
-   ├─ contested?  ──────► CONFLICT      two clauses fix different values for the same rule
-   │
-   ├─ corpus silent? ───► NOT COVERED   nothing on topic, or the question turns on a
-   │                                    term that appears nowhere in the corpus
-   │
-   └─ otherwise ────────► ANSWERED      extractive answer + citations
+```mermaid
+flowchart TD
+    Q["Question"] --> R["<b>Retrieve</b><br/>hybrid: MiniLM embeddings + TF-IDF<br/>cosine similarity over 148 sections"]
+
+    R --> C{"Does the question land on a<br/><b>contested quantity</b>?<br/><i>two clauses fixing different values<br/>for the same regulated rule</i>"}
+    C -- yes --> CONF["<b>CONFLICT</b><br/>show every clause and its value<br/>refuse to pick a side"]
+
+    C -- no --> G1{"<b>Gate 1 — weak match</b><br/>did anything score above<br/>the threshold?"}
+    G1 -- no --> NC["<b>NOT COVERED</b><br/>name the gap, cite nearest<br/>sections for context only"]
+
+    G1 -- yes --> G2{"<b>Gate 2 — unsupported term</b><br/>does the question turn on a word<br/>absent from the whole corpus?<br/><i>wedding · maternity · ChatGPT</i>"}
+    G2 -- yes --> NC
+    G2 -- no --> ANS["<b>ANSWERED</b><br/>extractive answer<br/>+ citations with scores"]
+
+    CONF --> OUT["Response carries the passages<br/>it was built from: section ref,<br/>source file, format, similarity"]
+    NC --> OUT
+    ANS --> OUT
 ```
 
-Conflict is checked **before** coverage on purpose. A contested question is not an
-unanswered one — the corpus answers it too many times, which is a different failure
-and deserves a different response.
+**Why the order.** Conflict is checked **before** coverage on purpose: a contested
+question is not an unanswered one — the corpus answers it too many times, which is a
+different failure and deserves a different response.
+
+**Why two coverage gates.** Gate 1 alone is not enough, and that is the whole
+difficulty of this problem. *"What happens if I miss the exam because of a family
+wedding?"* retrieves the medical-absence clause with a **high** score, because the
+question really is about missing an exam. The passage is topically perfect and
+answers a different question. Gate 2 is what catches it.
 
 ### Retrieval is hybrid, and that is not decoration
 
