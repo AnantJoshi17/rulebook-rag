@@ -1,0 +1,17 @@
+{
+  "description": "Questions that land on the three planted contradictions, phrased several ways each, plus near-miss questions that must NOT be reported as conflicts.",
+  "conflict_questions": [
+    { "id": "CF-01", "question": "What is the minimum attendance I need to sit the end-semester exam?", "expected_topic": "attendance_for_exam_eligibility", "expected_sections": ["AR-3.2", "AR-7.4", "EC-3.1"] },
+    { "id": "CF-02", "question": "How many classes can I miss and still be allowed to write the exam?", "expected_topic": "attendance_for_exam_eligibility", "expected_sections": ["AR-3.2", "AR-7.4", "EC-3.1"] },
+    { "id": "CF-03", "question": "I have 70% attendance. Am I eligible to appear in the examination?", "expected_topic": "attendance_for_exam_eligibility", "expected_sections": ["AR-3.2", "AR-7.4", "EC-3.1"] },
+    { "id": "CF-04", "question": "How much notice must I give before staying out of the hostel overnight?", "expected_topic": "hostel_overnight_leave_notice", "expected_sections": ["HH-4.1", "HH-9.3"] },
+    { "id": "CF-05", "question": "I want to go home for the weekend. How far in advance do I apply for hostel leave?", "expected_topic": "hostel_overnight_leave_notice", "expected_sections": ["HH-4.1", "HH-9.3"] },
+    { "id": "CF-06", "question": "What CGPA do I need to keep my merit scholarship next year?", "expected_topic": "scholarship_retention_cgpa", "expected_sections": ["SP-2.1", "FS-6.2"] },
+    { "id": "CF-07", "question": "My CGPA is 7.7. Do I lose my tuition fee remission?", "expected_topic": "scholarship_retention_cgpa", "expected_sections": ["SP-2.1", "FS-6.2"] }
+  ],
+  "near_miss_questions": [
+    { "id": "NM-01", "question": "How many working days do I have to submit a medical certificate after missing a mid-semester test?", "must_not_be": "conflict", "note": "AR-4.3 says seven days, AR-5.4 says ten, but they attach to different events and are consistent." },
+    { "id": "NM-02", "question": "How much notice does the warden give before inspecting my room?", "must_not_be": "conflict", "note": "HH-2.4 states 24 hours for inspection. Same unit as HH-4.1 leave notice, different subject." },
+    { "id": "NM-03", "question": "Do I need to clear my dues before getting an admit card?", "must_not_be": "conflict", "note": "AR-5.2 and FS-3.1 agree; a naive overlap detector may treat agreement as disagreement." }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "description": "25 questions the corpus genuinely cannot answer. Every one is plausible and adjacent to a section that does exist, so a system that only thresholds on similarity will answer them confidently and wrongly. 'nearest_section' is the clause a naive system is most likely to misapply.",
+  "expected_response_type": "not_covered",
+  "questions": [
+    {
+      "id": "NC-01",
+      "question": "What happens if I miss the end-semester exam because of a family wedding?",
+      "nearest_section": "AR-5.4",
+      "why_uncovered": "AR-5.4 excuses absence on medical grounds only, and says so explicitly. No clause addresses family or social obligations."
+    },
+    {
+      "id": "NC-02",
+      "question": "Can I get a fee deadline extension if my bank is on strike on the due date?",
+      "nearest_section": "FS-3.3",
+      "why_uncovered": "FS-3.3 allows splitting an instalment on prior application. There is no force-majeure or payment-failure clause anywhere in FS."
+    },
+    {
+      "id": "NC-03",
+      "question": "I was under a government quarantine order but I have no medical certificate. Does my attendance still count?",
+      "nearest_section": "AR-7.4",
+      "why_uncovered": "AR-7.4 requires a certificate from a registered medical practitioner. The corpus never says whether a public health order substitutes for one."
+    },
+    {
+      "id": "NC-04",
+      "question": "My flight home was cancelled and I missed three days of classes. Is that excused?",
+      "nearest_section": "AR-7.5",
+      "why_uncovered": "The exemptions in AR-7 are an exhaustive list under AR-7.1. Travel disruption is not among them."
+    },
+    {
+      "id": "NC-05",
+      "question": "Does menstrual leave count towards the attendance exemption?",
+      "nearest_section": "AR-7.4",
+      "why_uncovered": "No clause in the corpus mentions menstrual leave in any form."
+    },
+    {
+      "id": "NC-06",
+      "question": "I have been summoned to court as a witness on the date of my examination. What do I do?",
+      "nearest_section": "AR-5.4",
+      "why_uncovered": "Only medical absence from an examination is provided for. Legal obligations are not addressed."
+    },
+    {
+      "id": "NC-07",
+      "question": "Can I skip classes for a religious festival without losing attendance?",
+      "nearest_section": "AR-7.2",
+      "why_uncovered": "AR-7.2 covers sporting, technical and cultural events where the student represents the University. Personal religious observance is not covered."
+    },
+    {
+      "id": "NC-08",
+      "question": "Am I allowed to keep a pet cat in my hostel room?",
+      "nearest_section": "HH-2.2",
+      "why_uncovered": "HH-2.2 lists prohibited articles. Animals appear nowhere on that list or anywhere else in HH."
+    },
+    {
+      "id": "NC-09",
+      "question": "I am seeing a therapist and missed classes because of it. Is that treated the same as physical illness?",
+      "nearest_section": "AR-7.4",
+      "why_uncovered": "AR-7.4 names illness, hospitalisation and injury. Whether ongoing mental health treatment qualifies is never stated."
+    },
+    {
+      "id": "NC-10",
+      "question": "My laptop was stolen from the hostel so I could not submit my assignment. Can I get an extension?",
+      "nearest_section": "HH-8.2",
+      "why_uncovered": "HH-8.2 disclaims University liability for lost property but says nothing about academic consequences. No clause governs assignment extensions at all."
+    },
+    {
+      "id": "NC-11",
+      "question": "I am getting married during the semester. Can I take leave from the programme?",
+      "nearest_section": "AR-7.5",
+      "why_uncovered": "AR-7.5 covers bereavement only. There is no personal-leave provision."
+    },
+    {
+      "id": "NC-12",
+      "question": "Do I get attendance credit for donating blood at the campus donation camp?",
+      "nearest_section": "AR-7.2",
+      "why_uncovered": "Attendance credit is granted for the specific activities listed in AR-7.2 and AR-7.3. Voluntary campus activity is not one of them."
+    },
+    {
+      "id": "NC-13",
+      "question": "There was a power outage during my online quiz. Will it be rescheduled?",
+      "nearest_section": "AR-4.1",
+      "why_uncovered": "The corpus describes quizzes as a continuous evaluation component but never addresses online delivery or technical failure."
+    },
+    {
+      "id": "NC-14",
+      "question": "Can I take a gap year and rejoin the programme later without losing my seat?",
+      "nearest_section": "AR-10.2",
+      "why_uncovered": "AR-10.2 fixes a seven-year maximum duration but never provides for suspending or deferring registration."
+    },
+    {
+      "id": "NC-15",
+      "question": "What is the maternity leave policy for students?",
+      "nearest_section": "AR-7.4",
+      "why_uncovered": "The corpus has no provision for maternity in any document."
+    },
+    {
+      "id": "NC-16",
+      "question": "The mess food triggers my nut allergy. Can I be exempted from paying mess charges?",
+      "nearest_section": "HH-3.1",
+      "why_uncovered": "HH-3.1 makes mess membership compulsory with no exemption route. Dietary needs and allergies are never mentioned."
+    },
+    {
+      "id": "NC-17",
+      "question": "Someone is cyberbullying me in a hostel group chat. Who do I report it to?",
+      "nearest_section": "HH-2.6",
+      "why_uncovered": "HH-2.6 covers ragging and names the Anti-Ragging Committee. Online harassment between residents is not addressed."
+    },
+    {
+      "id": "NC-18",
+      "question": "Can I appeal the outcome of a re-evaluation if I still disagree with the revised marks?",
+      "nearest_section": "AR-6.5",
+      "why_uncovered": "AR-6.5 sets out the re-evaluation process but provides no appeal against its result. Appeals exist elsewhere (HH-6.3, EC-2.4) for different decisions."
+    },
+    {
+      "id": "NC-19",
+      "question": "Is there a dress code on campus?",
+      "nearest_section": "HH-2.2",
+      "why_uncovered": "No document in the corpus contains a dress or appearance provision."
+    },
+    {
+      "id": "NC-20",
+      "question": "Can I sublet my hostel room to a friend over the summer vacation?",
+      "nearest_section": "HH-9.1",
+      "why_uncovered": "HH-9.1 governs who may stay during vacations. Transferring a room to another person is not contemplated anywhere."
+    },
+    {
+      "id": "NC-21",
+      "question": "Am I allowed to record lectures on my phone?",
+      "nearest_section": "AR-8.3",
+      "why_uncovered": "AR-8.3 bans electronic devices in the examination hall only. Recording in a classroom is not addressed."
+    },
+    {
+      "id": "NC-22",
+      "question": "Does volunteering at an NGO count towards my mandatory internship?",
+      "nearest_section": "AR-10.3",
+      "why_uncovered": "AR-10.3 requires an industrial internship certified by a host organisation. Whether a non-industrial placement qualifies is never stated."
+    },
+    {
+      "id": "NC-23",
+      "question": "Can international students pay their fees in dollars instead of rupees?",
+      "nearest_section": "FS-3.2",
+      "why_uncovered": "FS-3.2 lists accepted payment modes but no currency provision, and the corpus has no international-student category."
+    },
+    {
+      "id": "NC-24",
+      "question": "Can I use ChatGPT to help write my assignments?",
+      "nearest_section": "AR-8.1",
+      "why_uncovered": "AR-8.1 defines plagiarism as unacknowledged use of work that is not the student's own. Whether AI assistance falls inside that definition is not stated."
+    },
+    {
+      "id": "NC-25",
+      "question": "My scooter was damaged in the campus parking area. Will the University compensate me?",
+      "nearest_section": "HH-8.3",
+      "why_uncovered": "HH-8.3 covers parking permits, and HH-8.2 disclaims liability for property in rooms. Damage to a vehicle in a campus parking area is not covered."
+    }
+  ]
+}
