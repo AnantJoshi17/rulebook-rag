@@ -1,0 +1,18 @@
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pydantic>=2.7
+scikit-learn>=1.4
+numpy>=1.26
+pymupdf>=1.24
+python-multipart>=0.0.9
+
+# Dense retrieval. Downloads a ~90 MB model on first run.
+# The service works without it (lexical-only) and reports which backend served
+# each request, so nothing silently degrades.
+sentence-transformers>=3.0
+
+# Only needed to regenerate the PDF member of the corpus.
+reportlab>=4.1
+
+# Optional: set ANTHROPIC_API_KEY to enable LLM phrasing of extractive answers.
+# anthropic>=0.34
