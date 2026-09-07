@@ -9,12 +9,17 @@ Ask *"what attendance do I need to sit the exam?"* and it does not pick one numb
 It reports that AR-3.2 says 75%, AR-7.4 says 65% with a medical certificate, and
 EC-3.1 lets a committee waive the requirement altogether — and shows you all three.
 
+**Live demo:** https://rulebook-rag.onrender.com — the free instance sleeps after
+15 minutes of inactivity, so the first request may take up to a minute to wake it.
+It runs lexical-only retrieval there (512 MB RAM will not hold PyTorch), which is the
+configuration the 55/55 evaluation below was measured on.
+
 ---
 
 ## Run it
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/AnantJoshi17/rulebook-rag.git
 cd rulebook-rag
 
 python -m venv .venv
