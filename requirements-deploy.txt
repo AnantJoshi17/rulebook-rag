@@ -1,0 +1,10 @@
+# Slim requirements for free-tier hosting (512 MB RAM).
+# sentence-transformers and torch are deliberately excluded: they do not fit,
+# and the service degrades to lexical-only retrieval, which scores 55/55 on
+# evaluate.py. Set USE_DENSE_EMBEDDINGS=0 so it does not attempt the download.
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pydantic>=2.7
+scikit-learn>=1.4
+numpy>=1.26
+pymupdf>=1.24
