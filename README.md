@@ -15,7 +15,7 @@ It runs lexical-only retrieval there (512 MB RAM will not hold PyTorch), which i
 configuration the 55/55 evaluation below was measured on.
 
 ---
-
+0
 ## Run it
 
 ```bash
