@@ -13,7 +13,7 @@ EC-3.1 lets a committee waive the requirement altogether — and shows you all t
 15 minutes of inactivity, so the first request may take up to a minute to wake it.
 It runs lexical-only retrieval there (512 MB RAM will not hold PyTorch), which is the
 configuration the 55/55 evaluation below was measured on.
-
+0
 ---
 
 ## Run it
